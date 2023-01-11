@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <title>猫咪识别</title>
+    <h1>猫咪识别</h1>
+    <h2>基于神经网络+flask开发</h2>
+    <h3>因为作者懒得匹配正则,so图片请发jpg格式！  </h3> 
+</head>
+    <body>
+        <div>
+            <form method="post" action="http://192.168.0.101:5000/up_photo" enctype="multipart/form-data">
+            <input type="file" size="30" name="photo"/>
+            <br>
+<!--            <input type="text" class="txt_input" name="name" style="margin-top:15px;"/>-->
+            <input type="submit" value="提交信息" class="button-new" style="margin-top:15px;"/>
+            </form>
+        </div>
+  {% if s==1 %}
+  <div><h1>是猫咪</h1><div>
+    <img src=" /static/1.jpg" width="200px" height="200px"/>        
+    <h3>如果图片不是你的图片，ok这是个bug，我修不来 </h3>  
+    <h3>。。。破案了，这个是浏览器的问题，与我无瓜shirt！ </h3>     
+  {% elif s==0 %}
+  <div><h1>不是猫咪</h1><div>
+         <img src=" /static/1.jpg" width="200px" height="200px"/>        
+       <h3>如果图片不是你的图片，ok这是个bug，我修不来 </h3>           
+       <h3>。。。破案了，这个是浏览器的问题，与我无瓜shirt！ </h3> 
+  {% else  %}
+       <script>alert('在测试中，别乱发图，否则封你ip！！！')</script>
+  {% endif %}
+   
+    </body>
+</html>

@@ -1,0 +1,129 @@
+<style>
+    body{
+        background-color:#1e1e1e;    
+    }
+    *{margin:0;padding:0}
+    #header {
+        background-color:#282b33;
+        color:white;
+        text-align:center;
+        padding:5px;
+        width:100%;
+        position: fixed;
+        z-index:1;
+        height: 100px;
+        border-style: solid;
+        border-radius: 15px;
+        border-color: azure;
+        font-size: 35px;
+    }
+    #nav {
+        line-height:100%;
+        background-color:#7e8186;
+        position: fixed;
+        width:150px;
+        height:100%;
+        padding:5px; 
+        border-style: solid;
+        border-radius: 25px;
+        border-color: azure;
+    }
+    
+    #section {
+        width:100%;
+        float:left;
+        padding:10px; 
+        position:absolute;
+        left:160px;
+        top:120px;
+        text-align: center;
+        color: #dcd6a1;
+        
+    }
+    #footer {
+        background-color:black;
+        color:white;
+        clear:both;
+        text-align:center;
+        padding:5px; 
+    }
+    #zw{
+        border-style: solid;
+        border-radius: 15px;
+        border-color: rgb(69, 138, 222);
+
+
+    }
+    </style>
+<body>
+
+    
+    
+    <div id="nav">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2>均值</h2>
+        <h3>{{n}}</h3>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>    
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>    
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>    
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+    
+    <div id="header">
+            <h1>温度数据屏</h1>
+    </div>  
+    
+   
+    <div id="section">
+        <h1>实时温度</h1>
+    {%for dat in s %}
+        <div id="zw">
+            <br>
+            <h2>温度</h2>
+            <h3>{{dat['dat']}}</h3>
+            <br>
+        </div>   
+    {%endfor%} 
+  </div>
+    <div id="footer">
+    颜孙炜
+    </div>
+    
+    </body>
+    
